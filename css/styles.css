@@ -1,11 +1,37 @@
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   color: #434455;
   background-color: #ffffff;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 a {
@@ -13,8 +39,34 @@ a {
 }
 
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 .header-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .logo {
@@ -25,6 +77,7 @@ a {
   letter-spacing: 0.03em;
   color: #4d5ae5;
   text-transform: uppercase;
+  margin-right: 70px;
 }
 
 .header-logo {
@@ -37,6 +90,8 @@ a {
 
 .footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-text {
@@ -44,11 +99,16 @@ a {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin-top: 16px;
+  max-width: 264px;
 }
 
 .header-menu {
+  display: flex;
 }
+
 .header-menu-item {
+  margin-right: 40px;
 }
 
 .header-menu-link {
@@ -75,8 +135,11 @@ a {
   font-style: normal;
 }
 .address-list {
+  display: flex;
+  justify-content: space-between;
 }
 .address-list-item {
+  margin-left: 40px;
 }
 
 .address-item {
@@ -97,6 +160,10 @@ a {
 
 .hero {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  margin-bottom: 120px;
+  text-align: center;
 }
 
 .hero-title {
@@ -105,18 +172,23 @@ a {
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
-  text-align: center;
+  max-width: 496px;
+  margin: 0 auto 48px auto;
 }
 
 .hero-button {
   cursor: pointer;
   font-family: inherit;
+  border: none;
   background-color: #4d5ae5;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.04em;
   color: #ffffff;
+  padding: 16px 32px;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
 .hero-button:hover,
@@ -125,12 +197,20 @@ a {
 }
 
 .about-us {
+  margin-bottom: 120px;
 }
+
 .about-us-title {
 }
+
 .about-us-list {
+  display: flex;
+  justify-content: space-between;
 }
+
 .about-us-item {
+  width: calc((100% - 3 * 24px) / 4);
+  gap: 24px;
 }
 
 .about-us-theme {
@@ -139,6 +219,7 @@ a {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .about-us-text {
@@ -150,6 +231,9 @@ a {
 
 .team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 .team-title {
@@ -161,14 +245,32 @@ a {
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .team-list {
+  display: flex;
+  justify-content: space-between;
 }
 .team-item {
   background-color: #ffffff;
+  width: 264px;
+  margin-right: 24px;
+  padding-bottom: 32px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .team-image {
+  margin-bottom: 32px;
+}
+
+.team-item:last-child {
+  margin-right: 0;
+}
+
+.team-content {
+  width: 232px;
+  text-align: center;
 }
 
 .team-member {
@@ -187,6 +289,7 @@ a {
 }
 
 .portfolio {
+  margin-bottom: 120px;
 }
 
 .portfolio-title {
@@ -197,9 +300,32 @@ a {
   color: #2e2f42;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
+.portfolio-item {
+  /* width: calc((100% - 2 * 24px) / 3);
+  gap: 48px 24px; */
+  width: 360px;
+  margin-right: 24px;
+}
+
+.portfolio-item:last-child {
+  margin-right: 0;
+}
+
+.portfolio-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+}
 .portfolio-list {
+  margin-top: 48px;
+  display: flex;
+  /* justify-content: space-between; */
 }
 .portfolio-image {
 }
@@ -217,4 +343,5 @@ a {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
